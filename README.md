@@ -8,5 +8,5 @@ Souch a functionality can be usefoul when creating custom links for users that a
 ### Costumize the url
 The url is formed from the domain + path + hash + params.
 When you run the app in your browser it have a url like this:
-http://<domain>/#/?tabtitle=&lt;ex:home&gt;&gameCount=&lt;ex:456&gt;
+http://&lt;domain&gt;/#/?tabtitle=&lt;ex:home&gt;&gameCount=&lt;ex:456&gt;
 You can see the changes made by this settable request by looking at the browser tabs text, and in the first list item from the benefits list, where by default is "Over 200 games".
