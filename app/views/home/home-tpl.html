@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-m-8">
+		<div class="row">
+			<div class="col-m-12">
+				<figure class="banner">
+					<img src="./assets/images/bonus.png" alt="Get up to $100 welcome bonus">
+				</figure>
+			</div>
+		</div>
+		<div class="row space-bottom-sm">
+			<div class="col-m-12">
+				<p ng-bind="homeCtrl.messages.shapo"></p>
+			</div>
+		</div>
+		<div class="row space-bottom-sm">
+			<div class="col-m-12">
+				<ul class="benefits">
+					<li ng-repeat="benefit in homeCtrl.messages.benefits" ng-bind="benefit"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row space-bottom-sm">
+			<div class="col-m-4 step" ng-repeat="step in homeCtrl.messages.steps">
+				<h3 class="title" ng-bind="{{$index + 1}} + ') ' + step.title"></h3>
+				<p class="desc" ng-bind="step.desc"></p>
+			</div>
+		</div>
+		<div class="row space-bottom-sm">
+			<div class="col-m-12">
+				<a ng-href="{{homeCtrl.messages.cta.target}}" class="btn btn-coral"
+					ng-bind="homeCtrl.messages.cta.text" target="_blank"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-m-12">
+				<div class="collapse" ng-class="{in: homeCtrl.messages.tnc.isOpen == true}">
+					<div class="collapse-header" ng-click="homeCtrl.messages.tnc.toggleCollapse()">
+						<span class="collapse-title" ng-bind="homeCtrl.messages.tnc.title"></span>
+					</div>
+					<div class="collapse-body" ng-bind-html="homeCtrl.messages.tnc.text"></div>
+					<div class="collapse-footer"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

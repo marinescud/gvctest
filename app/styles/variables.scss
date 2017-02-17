@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url('../assets/fonts/GothamUltra.woff2') format('woff2'),
+       url('../assets/fonts/GothamUltra.woff') format('woff'),
+       url('../assets/fonts/GothamUltra.ttf') format('truetype');
+}
+
+// Variables
+$black: black;
+$white: #fff;
+$light: #f7f7f7;
+$gray: #7c7c7c;
+$dark: #444444;
+$blue: rgb(40,162,207);
+$dark-blue: rgba(27,52,87,1);
+$coral: #f00a47;
+
+$roboto: 'Roboto', sans-serif;
+$roboto-condensed: 'Roboto Condensed', sans-serif;
+$gotham: 'Gotham Ultra', sans-serif;
+
+@mixin transition ($duration) {
+	/* Set our transitions up. */
+	-webkit-transition: max-height $duration;
+	-moz-transition: max-height $duration;
+	transition: max-height $duration;
+}
+//@include transition(1s);

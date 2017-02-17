@@ -1,0 +1,105 @@
+@import "variables";
+@import "reset";
+@import "grid";
+@import "components";
+
+body {
+	color: $white;
+	font-family: $roboto-condensed;
+	font-size: 18px;
+	line-height: 1.4;
+}
+b {
+	font-weight: bold;
+}
+.step {
+	.title {
+		color: $blue;
+	}
+  .desc {
+    color: $white;
+    font-size: 12px;
+  }
+}
+.space-bottom-xs {
+	margin-bottom: 15px;
+}
+.space-bottom-sm {
+	margin-bottom: 30px;
+}
+.space-bottom-md {
+	margin-bottom: 45px;
+}
+.space-bottom-lg {
+	margin-bottom: 60px;
+}
+.space-top-xs {
+	margin-top: 15px;
+}
+.space-top-sm {
+	margin-top: 30px;
+}
+.space-top-md {
+	margin-top: 45px;
+}
+.space-top-lg {
+	margin-bottom: 60px;
+}
+
+#partycasino {
+	background: $black;
+}
+#main-header {
+	background: $black;
+	height: 36px;
+}
+#main-footer {
+	color: $gray;
+	font-size: 12px;
+	background: $black;
+}
+#logo {
+	display: block;
+	width: 90px;
+	padding: 8px 0;
+	img {
+		display: block;
+	}
+}
+#main-content {
+	background: transparent url("../assets/images/mountains.png") no-repeat center top;
+	background-size: 1920px;
+	.banner {
+		height: 180px;
+		padding-top: 100px;
+		img {
+			max-width: 100%;
+		}
+	}
+	.benefits {
+		padding-left: 20px;
+		li {
+			list-style-type: disc;
+		}
+	}
+}
+@media only screen and (min-width: 920px) {
+	.step {
+		position: relative;
+		&:before {
+			content: "\f054";
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 20px;
+			text-decoration: inherit;
+			padding: 0 14px;
+			position: absolute;
+			right: -20px;
+			top: 30%;
+		}
+		&:last-child:before {
+			content: "";
+		}		
+	}
+}

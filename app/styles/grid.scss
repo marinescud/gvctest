@@ -1,0 +1,86 @@
+//Grid variables
+$gutter: 15px;
+
+@mixin col-setup () {
+	box-sizing: border-box;
+	float: left;
+	padding-left: $gutter;
+	padding-right: $gutter;
+}
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.container-fluid {
+	display: block;
+	box-sizing: border-box;
+	@include clearfix();
+}
+.container {
+	max-width: 832px;
+	margin: 0 auto;
+	display: block;
+	box-sizing: border-box;
+	@include clearfix();
+}
+.row {
+	@include clearfix();
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+}
+.col-m-1, .col-m-2, .col-m-3, .col-m-4, .col-m-5, .col-m-6,
+.col-m-7, .col-m-8, .col-m-9, .col-m-10, .col-m-11, .col-m-12 {
+	@include col-setup();
+	width: 100%;
+}
+body {
+	background: red;
+}
+@media only screen and (min-width: 920px) {
+	.row {
+		margin: 0 -15px;
+	}
+	.col-m-1 {
+		width: 1% * (100 / 12);
+	}
+	.col-m-2 {
+		width: 2% * (100 / 12);
+	}
+	.col-m-3 {
+		width: 3% * (100 / 12);
+	}
+	.col-m-4 {
+		width: 4% * (100 / 12);
+	}
+	.col-m-5 {
+		width: 5% * (100 / 12);
+	}
+	.col-m-6 {
+		width: 6% * (100 / 12);
+	}
+	.col-m-7 {
+		width: 7% * (100 / 12);
+	}
+	.col-m-8 {
+		width: 8% * (100 / 12);
+	}
+	.col-m-9 {
+		width: 9% * (100 / 12);
+	}
+	.col-m-10 {
+		width: 10% * (100 / 12);
+	}
+	.col-m-11 {
+		width: 11% * (100 / 12);
+	}
+	.col-m-12 {
+		width: 12% * (100 / 12);
+	}
+}
